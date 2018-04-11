@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>jsonp</title>
+    <script src="./jsonp.js"></script>
+  </head>
+  <body>
+    <h1>后台给的完整的 http://m.riseuptechs.com/api/mall/product/search/list/jsonp</h1>
+    <script>      
+      var jsonp = new Jsonp({
+        api: 'http://m.riseuptechs.com/api/mall'
+      });
+
+      jsonp.get('/product/search/list', {page: 1, pageSize: 6}, function (resp) {
+        console.log(resp, '第一个请求')
+      })
+
+      jsonp.get('/product/search/list', {page: 2, pageSize: 10}, function (resp) {
+        console.log(resp, '第二个请求')
+      })
+    </script>
+  </body>
+</html>

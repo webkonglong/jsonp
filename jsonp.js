@@ -23,7 +23,7 @@ Jsonp.prototype.get = function (url, params, callback) {
 }
 
 Jsonp.prototype.connectUrl = function (params) {
-  for (key in params) {
+  for (var key in params) {
     if (params.hasOwnProperty(key)) {
       this.query += encodeURIComponent(key) + "=" + encodeURIComponent(params[key]) + "&";
     }
@@ -60,3 +60,8 @@ Jsonp.prototype.load = function (url) {
   }
   this.head.appendChild(script);
 }
+
+if ('object' == typeof exports) {
+  export default Jsonp
+}
+

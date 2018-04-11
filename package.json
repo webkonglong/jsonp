@@ -1,0 +1,16 @@
+{
+  "name": "jsonp-amz",
+  "description": "jsonp",
+  "version": "0.0.1",
+  "author": "konglong <anmingzhe@me.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "./jsonp.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webkonglong/jsonp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webkonglong/jsonp/issues"
+  }
+}
